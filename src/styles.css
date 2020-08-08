@@ -16,11 +16,21 @@ section {
   height: 100vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
 
   background-image: url(../assets/bg-projects.png);
-  background-size: contain;
-  background-position: center;
   background-repeat: no-repeat;
+  transform: scale(1.2) translate(30vh, 20vh);
+  animation: animatedBackground 1s ease-out;
 }
 
 #sidebar-menu {
@@ -30,6 +40,7 @@ section {
   transform: translateX(-60%) skewX(27deg);
   background-color: black;
   opacity: 0.6;
+  animation: animatedSidebar 1s ease-out;
 }
 
 #welcome-section > svg {
@@ -37,6 +48,10 @@ section {
   height: 75%;
   overflow: visible;
   z-index: 10;
+
+  transform: scale(0);
+  animation: animatedCircularWidget 1s ease-out forwards;
+  animation-delay: 2s;
 }
 
 .background-opacity-layer {
@@ -54,6 +69,11 @@ section {
   font-family: 'Audiowide', cursive;
   display: swap;
   color: rgba(255, 255, 255, 0.7);
+
+  transform: translateX(-120%);
+  opacity: 0;
+  animation: animatedSiteOwnerText 1s ease-out forwards;
+  animation-delay: 1s;
 }
 
 .site-owner-fullname {
@@ -98,5 +118,47 @@ section {
 @media screen and (min-width: 768px) {
   #projects .image-preview {
     width: 200px;
+  }
+}
+
+
+
+/* Animations */
+@keyframes animatedBackground {
+  from {
+    transform: scale(0.3) translate(-10vh, 60vh);
+    opacity: 0;
+  }
+  to { 
+    transform: scale(1.2) translate(30vh, 20vh);
+    opacity: 1;
+  }
+}
+@keyframes animatedSidebar {
+  from {
+    transform: translateX(-120%) skewX(27deg);
+  }
+  to { 
+    transform: translateX(-60%) skewX(27deg);
+  }
+}
+@keyframes animatedSiteOwnerText {
+  from {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  to { 
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes animatedCircularWidget {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to { 
+    transform: scale(1);
+    opacity: 1;
   }
 }
