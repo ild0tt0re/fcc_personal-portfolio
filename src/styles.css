@@ -77,6 +77,24 @@ section {
   width: 200px;
 }
 
+
+/* Circular Widget */
+#EmailSlice #EmailEllipse:hover~*,
+#GithubSlice #GitHubEllipse:hover~*,
+#LinkedinSlice #LinkedinEllipse:hover~* {
+  fill-opacity: 1;
+}
+#EmailSlice #EmailEllipse~*,
+#GithubSlice #GitHubEllipse~*,
+#LinkedinSlice #LinkedinEllipse~* {
+  pointer-events: none;
+}
+#EmailSlice #EmailEllipse:hover,
+#GithubSlice #GitHubEllipse:hover,
+#LinkedinSlice #LinkedinEllipse:hover {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   #projects .image-preview {
     width: 200px;
