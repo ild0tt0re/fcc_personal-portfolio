@@ -29,18 +29,23 @@ section {
 
   background-image: url(../assets/bg-projects.png);
   background-repeat: no-repeat;
-  transform: scale(1.2) translate(30vh, 20vh);
-  animation: animatedBackground 1s ease-out;
+
+  transform: scale(0.3) translate(-10vw, 60vh);
+  opacity: 0;
+  animation: animatedBackgroundProjects 1s ease-out forwards;
+  animation-delay: 2s;;
 }
 
 #sidebar-menu {
   height: 100vh;
   width: 90%;
   position: absolute;
-  transform: translateX(-60%) skewX(27deg);
   background-color: black;
+
   opacity: 0.6;
-  animation: animatedSidebar 1s ease-out;
+  transform: translateX(-120%) skewX(27deg);
+  animation: animatedSidebar 1s ease-out forwards;
+  animation-delay: 0.5s;
 }
 
 #welcome-section > svg {
@@ -58,7 +63,10 @@ section {
   height: 100vh;
   width: 100%;
   position: absolute;
-  background: rgba(0,0,0,0.72);
+  
+  background: rgba(0,0,0,0.32);
+  animation: animatedBackgroundColor 1s ease-out forwards;
+  /* animation-delay: 2s; */
 }
 
 .site-owner-text-box {
@@ -124,13 +132,21 @@ section {
 
 
 /* Animations */
-@keyframes animatedBackground {
+@keyframes animatedBackgroundColor {
   from {
-    transform: scale(0.3) translate(-10vh, 60vh);
+    background: rgba(0,0,0,0.32);
+  }
+  to { 
+    background: rgba(0,0,0,0.72);
+  }
+}
+@keyframes animatedBackgroundProjects {
+  from {
+    transform: scale(0.3) translate(-10vw, 60vh);
     opacity: 0;
   }
   to { 
-    transform: scale(1.2) translate(30vh, 20vh);
+    transform: scale(1.2) translate(22vw, 20vh);
     opacity: 1;
   }
 }
