@@ -20,7 +20,7 @@ section {
   position: relative;
 }
 
-.bg {
+.bg-projects {
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -29,6 +29,7 @@ section {
 
   background-image: url(../assets/bg-projects.png);
   background-repeat: no-repeat;
+  background-size: 70%;
 
   transform: scale(0.3) translate(-10vw, 60vh);
   opacity: 0;
