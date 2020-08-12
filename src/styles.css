@@ -23,9 +23,8 @@ section {
 .bg-tech {
   position: absolute;
   z-index: -1;
-  width: 100%;
-  height: 100%;
-
+  width: 1960px;
+  height: 1180px;
 
   background-image: url(../assets/bg-tech.png);
   background-repeat: no-repeat;
@@ -52,8 +51,9 @@ section {
 #welcome-section > svg {
   width: 100%;
   height: 75%;
-  overflow: visible;
+  overflow: hidden;
   z-index: 10;
+  padding: 20px;
 
   transform: scale(0);
   animation: animatedCircularWidget 1s ease-out forwards;
@@ -147,7 +147,7 @@ section {
     opacity: 0;
   }
   to { 
-    transform: scale(1.2) translate(22vw, 20vh);
+    transform: scale(1.2) translate(18vw, 29vh);
     opacity: 1;
   }
 }
