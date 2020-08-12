@@ -19,10 +19,10 @@ nav {
 nav a {
   text-decoration: none;
   margin-left: 30px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   padding: 10px;
   position: relative;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 nav a::before {
@@ -32,7 +32,7 @@ nav a::before {
   height: 2px;
   bottom: 0;
   left: 0px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.2s ease-in-out 0s;
