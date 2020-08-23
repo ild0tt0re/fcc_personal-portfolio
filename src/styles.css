@@ -237,8 +237,8 @@ section {
   width: auto;
   background-color: rgba(0, 0, 0, 0.72);
   display: grid;
-  padding: 30px;
-  grid-template-columns: 1fr 1fr;
+  padding: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 40px 40px;
 }
 
@@ -256,6 +256,10 @@ section {
 #projects .project-tile:hover {
   border-color: white;
   cursor: pointer;
+}
+
+#projects .project-tile:hover p {
+  color: white;
 }
 
 #projects .image-preview {
