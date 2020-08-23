@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -12,7 +16,7 @@ header {
 
 nav {
   text-align: right;
-  padding: 30px 60px;
+  padding: 20px 60px;
   font-family: 'Audiowide', cursive;
 }
 
@@ -147,10 +151,6 @@ section {
   border-radius: 100%;
 }
 
-#projects .image-preview {
-  width: 200px;
-}
-
 /* Circular Widget */
 #EmailSlice #EmailEllipse:hover ~ *,
 #GithubSlice #GitHubEllipse:hover ~ *,
@@ -230,4 +230,52 @@ section {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/** Projects Section */
+#projects {
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.72);
+  display: grid;
+  padding: 30px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 40px;
+}
+
+#projects .project-tile {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+#projects .project-tile:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+#projects .image-preview {
+  width: 100%;
+}
+
+.project-tile__overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(172, 172, 172, 0.1);
+  position: absolute;
+}
+
+.project-tile p {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.72);
 }
