@@ -1,6 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Audiowide', cursive;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 header {
@@ -12,8 +18,7 @@ header {
 
 nav {
   text-align: right;
-  padding: 30px 60px;
-  font-family: 'Audiowide', cursive;
+  padding: 20px 60px;
 }
 
 nav a {
@@ -120,7 +125,6 @@ section {
   left: 50px;
   bottom: 0;
 
-  font-family: 'Audiowide', cursive;
   display: swap;
   color: rgba(255, 255, 255, 0.7);
 
@@ -147,10 +151,6 @@ section {
   border-radius: 100%;
 }
 
-#projects .image-preview {
-  width: 200px;
-}
-
 /* Circular Widget */
 #EmailSlice #EmailEllipse:hover ~ *,
 #GithubSlice #GitHubEllipse:hover ~ *,
@@ -166,12 +166,6 @@ section {
 #GithubSlice #GitHubEllipse:hover,
 #LinkedinSlice #LinkedinEllipse:hover {
   cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-  #projects .image-preview {
-    width: 200px;
-  }
 }
 
 /* Animations */
@@ -230,4 +224,89 @@ section {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/** Projects Section */
+#projects {
+  background-color: rgba(0, 0, 0, 0.72);
+}
+
+.section-title {
+  background-color: rgba(0, 0, 0, 0.72);
+}
+
+.section-title p {
+  margin: 0;
+  padding: 40px;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.projects-wrapper {
+  width: auto;
+  display: grid;
+  padding: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px 40px;
+}
+
+.projects-wrapper .project-tile {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.projects-wrapper .project-tile:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+.projects-wrapper .project-tile:hover p {
+  color: white;
+}
+
+.projects-wrapper .image-preview {
+  width: 100%;
+}
+
+.project-tile__overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(172, 172, 172, 0.1);
+  position: absolute;
+}
+
+.project-tile p {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  width: -webkit-fill-available;
+  margin: 0;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.72);
+}
+
+@media screen and (min-width: 768px) {
+  .projects-wrapper .image-preview {
+    width: 200px;
+  }
+}
+
+/** FOOTER SECTION  */
+footer {
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.92);
+  text-align: center;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.7);
 }
