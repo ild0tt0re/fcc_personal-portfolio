@@ -14,26 +14,60 @@ header {
   width: 100%;
   top: 0;
   z-index: 50;
+
+  pointer-events: none;
+  height: auto;
+  transition: background-color 0.8s;
+}
+
+.menu-visible header {
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+
+#menu-btn {
+  position: fixed;
+  pointer-events: initial;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 204, 0.08);
+}
+
+.header__content {
+  height: 100vh;
+}
+
+.show-hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.menu-visible .show-hide {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
 }
 
 nav {
-  text-align: right;
+  text-align: center;
   padding: 20px 60px;
 }
 
 nav a {
-  text-decoration: none;
-  margin-left: 30px;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 10px;
+  display: block;
   position: relative;
   font-size: 1.8em;
-  display: inline-block;
-
-  transform: translateX(-120%);
+  padding: 15px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
   opacity: 0;
-  animation: animatedNavbarItem 1s ease-out forwards;
-  animation-delay: 1s;
+  transition: opacity 0.8s;
+}
+
+.menu-visible nav a {
+  opacity: 1;
 }
 
 nav a:hover {
@@ -226,6 +260,43 @@ section {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    height: initial;
+    background: initial;
+  }
+
+  .menu-visible header {
+    background-color: initial;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  .header__content {
+    height: initial;
+  }
+
+  .show-hide {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
+
+  nav {
+    text-align: right;
+  }
+
+  nav a {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 10px;
+    transform: translateX(-120%);
+
+    animation: animatedNavbarItem 1s ease-out forwards;
+    animation-delay: 1s;
+  }
+
   .site-owner-text-box {
     left: 50px;
   }
