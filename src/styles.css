@@ -21,7 +21,7 @@ header {
 }
 
 .menu-visible header {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #menu-btn {
@@ -30,7 +30,7 @@ header {
   right: 10px;
   top: 10px;
   padding: 12px 10px;
-  background-color: rgba(255, 255, 204, 0.08);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .header__content {
@@ -138,6 +138,7 @@ section {
   overflow: hidden;
   z-index: 10;
   padding: 20px;
+  padding-bottom: 20%;
 
   transform: scale(0);
   animation: animatedCircularWidget 1s ease-out forwards;
@@ -157,7 +158,7 @@ section {
 .site-owner-text-box {
   position: absolute;
   left: 20px;
-  bottom: 0;
+  bottom: 30px;
 
   display: swap;
   color: rgba(255, 255, 255, 0.7);
@@ -199,6 +200,30 @@ section {
 #GithubSlice #GitHubEllipse:hover,
 #LinkedinSlice #LinkedinEllipse:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #GitHubIcon {
+    transform: scale(1.8) translate3d(-228.9px, -104.1px, 10px);
+  }
+  #GitHubCopy {
+    transform: scale(1.6) translate3d(-193.9px, -101.1px, 10px);
+    display: none;
+  }
+  #LinkedinIcon {
+    transform: scale(1.8) translate3d(-134.9px, -18.1px, 10px);
+  }
+  #LinkedinCopy {
+    display: none;
+    transform: scale(1.6) translate3d(-110.9px, -27.1px, 10px);
+  }
+  #EmailIcon {
+    transform: scale(1.8) translate3d(-220.9px, -188.1px, 10px);
+  }
+  #EmailCopy {
+    display: none;
+    transform: scale(1.6) translate3d(-183.9px, -165.1px, 10px);
+  }
 }
 
 /* Animations */
@@ -301,8 +326,13 @@ section {
     animation-delay: 1s;
   }
 
+  #welcome-section > svg {
+    padding: 20px;
+  }
+
   .site-owner-text-box {
     left: 50px;
+    bottom: 0;
   }
 
   .site-owner-fullname {
